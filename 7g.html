@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object Demo</title>
+</head>
+<body>
+
+<h2>JavaScript Date Object Example</h2>
+<button onclick="showDateInfo()">Show Date & Time</button>
+
+<p id="output"></p>
+
+<script>
+function showDateInfo() {
+    let now = new Date();  // Create a new Date object
+
+    // Date methods
+    let date = now.getDate();
+    let month = now.getMonth() + 1; // Months are 0-indexed
+    let year = now.getFullYear();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+    let day = now.getDay(); // 0 = Sunday, 6 = Saturday
+    let timeString = now.toLocaleTimeString();
+    let dateString = now.toDateString();
+
+    document.getElementById("output").innerHTML =
+        `Current Date: ${dateString}<br>` +
+        `Current Time: ${timeString}<br>` +
+        `Day: ${day} (0=Sun)<br>` +
+        `Full Date: ${date}/${month}/${year}<br>` +
+        `Time: ${hours}:${minutes}:${seconds}`;
+}
+</script>
+
+</body>
+</html>
