@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Demo</title>
+</head>
+<body>
+
+    <h1>JavaScript Array Object Demo</h1>
+    <button onclick="showArrayDetails()">Click to Show Array Operations</button>
+    <p id="output"></p>
+
+    <script>
+        function showArrayDetails() {
+            // Create an array
+            let fruits = ["Apple", "Banana", "Mango"];
+
+            // Use properties and methods
+            let length = fruits.length;         // Property
+            fruits.push("Orange");              // Method: Add item
+            fruits.pop();                       // Method: Remove last item
+            fruits.unshift("Grapes");           // Add to beginning
+            fruits.shift();                     // Remove from beginning
+            let joined = fruits.join(", ");     // Convert to string
+            let index = fruits.indexOf("Banana"); // Find index
+
+            // Output
+            document.getElementById("output").innerHTML =
+                `<strong>Fruits Array:</strong> ${joined}<br>` +
+                `<strong>Length:</strong> ${length}<br>` +
+                `<strong>Index of 'Banana':</strong> ${index}`;
+        }
+    </script>
+
+</body>
+</html>
