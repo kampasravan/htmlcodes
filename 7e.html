@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Object Demo</title>
+</head>
+<body>
+
+<h2>JavaScript String Object Example</h2>
+<button onclick="showStringMethods()">Click to Show String Info</button>
+
+<p id="output"></p>
+
+<script>
+function showStringMethods() {
+    let str = "Hello JavaScript";
+
+    let length = str.length;                // Property
+    let upper = str.toUpperCase();          // Method: convert to uppercase
+    let lower = str.toLowerCase();          // Method: convert to lowercase
+    let index = str.indexOf("Java");        // Method: find index
+    let slice = str.slice(6, 16);           // Method: extract part of string
+    let replaced = str.replace("JavaScript", "World"); // Method: replace
+
+    document.getElementById("output").innerHTML =
+        `Original: ${str}<br>` +
+        `Length: ${length}<br>` +
+        `Uppercase: ${upper}<br>` +
+        `Lowercase: ${lower}<br>` +
+        `Index of "Java": ${index}<br>` +
+        `Slice (6–16): ${slice}<br>` +
+        `Replaced: ${replaced}`;
+}
+</script>
+
+</body>
+</html>
