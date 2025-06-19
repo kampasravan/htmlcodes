@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Output Display Methods</title>
+</head>
+<body>
+
+    <h1>JavaScript Output Demonstration</h1>
+
+    <button onclick="showAlert()">1. Alert Box</button><br><br>
+    <button onclick="writeToDocument()">2. Document Write</button><br><br>
+    <button onclick="writeToConsole()">3. Console Log</button><br><br>
+    <button onclick="writeToElement()">4. innerHTML Output</button><br><br>
+
+    <p id="outputArea"></p>
+
+    <script>
+        function showAlert() {
+            alert("This is an alert box!");
+        }
+
+        function writeToDocument() {
+            document.write("This is written using document.write()");
+        }
+
+        function writeToConsole() {
+            console.log("This message is logged in the browser console.");
+        }
+
+        function writeToElement() {
+            document.getElementById("outputArea").innerHTML = "Output using innerHTML!";
+        }
+    </script>
+
+</body>
+</html>
