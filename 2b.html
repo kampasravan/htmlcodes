@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nested Tables Example</title>
+</head>
+<body>
+    <h1>Nested Tables in HTML</h1>
+
+    <table border="2" cellpadding="10" cellspacing="2">
+        <caption><strong>Outer Table</strong></caption>
+        <tr>
+            <th>Name</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>
+                <!-- Nested Table Starts Here -->
+                <table border="1" cellpadding="5" cellspacing="1">
+                    <caption><em>Personal Info</em></caption>
+                    <tr>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>New York</td>
+                    </tr>
+                </table>
+                <!-- Nested Table Ends Here -->
+            </td>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>
+                <table border="1" cellpadding="5" cellspacing="1">
+                    <caption><em>Personal Info</em></caption>
+                    <tr>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Los Angeles</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
