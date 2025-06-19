@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Methods in JavaScript</title>
+</head>
+<body>
+
+    <h1>JavaScript Input Demonstration</h1>
+
+    <!-- 1. Input using prompt -->
+    <button onclick="promptInput()">1. Enter Name (Prompt)</button><br><br>
+
+    <!-- 2. Input using form field and button -->
+    <label for="formInput">2. Enter Age (Form Input):</label>
+    <input type="text" id="formInput">
+    <button onclick="readFormInput()">Submit</button><br><br>
+
+    <!-- 3. Input using input event -->
+    <label for="liveInput">3. Live Input:</label>
+    <input type="text" id="liveInput" onkeyup="showLiveInput()" />
+    <p id="liveOutput"></p>
+
+    <script>
+        function promptInput() {
+            let name = prompt("What is your name?");
+            if (name) {
+                alert("Hello, " + name + "!");
+            }
+        }
+
+        function readFormInput() {
+            let age = document.getElementById("formInput").value;
+            alert("Your age is " + age);
+        }
+
+        function showLiveInput() {
+            let value = document.getElementById("liveInput").value;
+            document.getElementById("liveOutput").innerHTML = "You typed: " + value;
+        }
+    </script>
+
+</body>
+</html>
