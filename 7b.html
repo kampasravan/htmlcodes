@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object Short Demo</title>
+</head>
+<body>
+
+    <button onclick="window.alert('This is an alert')">Alert</button>
+    <button onclick="confirmBox()">Confirm</button>
+    <button onclick="promptBox()">Prompt</button>
+    <button onclick="openWindow()">Open New Tab</button>
+    <button onclick="showSize()">Show Window Size</button>
+
+    <p id="output"></p>
+
+    <script>
+        function confirmBox() {
+            let result = confirm("Are you sure?");
+            document.getElementById("output").innerText = result ? "Confirmed" : "Cancelled";
+        }
+
+        function promptBox() {
+            let name = prompt("Enter your name:");
+            document.getElementById("output").innerText = "Hello, " + name;
+        }
+
+        function openWindow() {
+            window.open("https://www.google.com", "_blank");
+        }
+
+        function showSize() {
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            document.getElementById("output").innerText = `Width: ${w}, Height: ${h}`;
+        }
+    </script>
+
+</body>
+</html>
