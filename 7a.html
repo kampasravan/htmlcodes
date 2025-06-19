@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Demo</title>
+</head>
+<body>
+
+    <h1 id="mainHeading">Welcome to Document Object Example</h1>
+    <p id="info">Click the button to see document object properties and dynamic changes.</p>
+
+    <button onclick="showDocumentInfo()">Show Document Info</button>
+    <button onclick="createNewElement()">Add New Element</button>
+
+    <script>
+        function showDocumentInfo() {
+            // Using document object properties
+            alert("Document Title: " + document.title);
+            alert("Document URL: " + document.URL);
+
+            // Using document.write() (be careful: it rewrites the whole document)
+            document.write("<h2>This is written using document.write()</h2>");
+        }
+
+        function createNewElement() {
+            // Create a new paragraph element dynamically
+            let newPara = document.createElement("p");
+            newPara.textContent = "This paragraph was added using document.createElement and appendChild.";
+            
+            // Append to body
+            document.body.appendChild(newPara);
+        }
+    </script>
+
+</body>
+</html>
