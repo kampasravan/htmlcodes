@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Math Object Demo</title></head>
+<body>
+
+<button onclick="showMath()">Show Math Info</button>
+<p id="output"></p>
+
+<script>
+function showMath() {
+    let pi = Math.PI;
+    let rnd = Math.random();           // Random number (0 to 1)
+    let sqrt = Math.sqrt(25);          // Square root
+    let power = Math.pow(2, 3);        // 2^3 = 8
+    let max = Math.max(10, 20, 5);     // Max value
+    let min = Math.min(10, 20, 5);     // Min value
+
+    document.getElementById("output").innerHTML = 
+        `PI: ${pi}<br>Random: ${rnd.toFixed(2)}<br>Sqrt(25): ${sqrt}<br>` +
+        `2^3: ${power}<br>Max: ${max}<br>Min: ${min}`;
+}
+</script>
+
+</body>
+</html>
